@@ -1,0 +1,29 @@
+.new-poll-container {
+	margin: 4rem 0;
+	border: 1px solid $light-grey-border;
+	border-radius: 5px;
+	padding: 0;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+
+	input {
+		box-shadow: none;
+	}
+
+	.options-container {
+		margin: 0 0 3rem;
+
+		input {
+			margin: 0;
+
+		}
+	}
+
+	.buttons-container {
+
+		ul {
+			margin: 2rem 0 1rem;
+		}
+	}	
+}

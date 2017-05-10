@@ -1,0 +1,26 @@
+$hero-height: 45vh;
+
+.hero-section {
+	align-items: center;
+	background-color: #144062;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	height: $hero-height;
+	justify-content: center;
+	text-align: center;
+}
+
+.hero-section-text {
+	color: white;
+
+}
+
+.hero-section-buttons {
+	margin: 3rem 0 1rem;
+
+
+	> :first-child {
+		margin-right: 1rem;
+	}
+}

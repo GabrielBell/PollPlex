@@ -1,6 +1,7 @@
 var React = require('react');
 import * as Redux from 'react-redux';
 var {Link, IndexLink} = require('react-router');
+var actions = require('actions');
 // When authenticated Nav should show username, Dashboard should show addpoll/mypolls
 // when not authenticated Nav should show login/signup, dash should show signup
 var Dashboard = React.createClass({
@@ -11,8 +12,14 @@ var Dashboard = React.createClass({
       if(isLoggedIn){
         return (
           <span>
-            <a href="#" className="button">New Poll</a>
-            <a href="#" className="button">My Polls</a>
+            <Link to="/" className="button" onClick={(e) => {
+              
+              dispatch(actions.toggleCompleted('new', -1, -1));
+            }}>New Poll</Link>
+            <Link to="/" className="button" onClick={(e) => {
+              
+              dispatch(actions.toggleCompleted('list', -1, -1));
+            }}>My Polls</Link>
           </span>
         );
       }else{
@@ -66,6 +73,7 @@ export default Redux.connect(
   (state) => {
     return {
       isLoggedIn: state.auth.uid
+      
     }
   }
 )(Dashboard);

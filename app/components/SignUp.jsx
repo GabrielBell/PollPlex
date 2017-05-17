@@ -10,7 +10,7 @@ export var SignUp  = React.createClass({
 		var email= this.refs.email.value;
 		var password= this.refs.password.value;
 
-		dispatch(actions.startSignUp(name, email, password));
+		dispatch(actions.handleSignUp(name, email, password));
 	},
 	render: function() {
 		return (

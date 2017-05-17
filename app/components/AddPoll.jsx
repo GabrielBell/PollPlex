@@ -9,10 +9,12 @@ import OptionList from 'OptionList'
 export var AddPoll = React.createClass({
 	handleSubmit: function(e) {
 		e.preventDefault();
-		var {dispatch, options} = this.props;
+		var {dispatch, options, uid} = this.props;
 		var name = this.refs.pollName.value;
-		dispatch(actions.addNewPoll(name, options));
-	
+		this.refs.pollName.value = '';
+		//set completed to true, write to database and store, reset options
+		dispatch(actions.startAddNewPoll(name, options));
+		
 	},
 	render: function(){
 		var {dispatch, options} = this.props;
@@ -58,8 +60,8 @@ export var AddPoll = React.createClass({
 export default connect(
 	(state) => {
 		return {
-			options: state.options
-			
+			options: state.options,
+			uid: state.auth.uid
 		}
 	}
 )(AddPoll);

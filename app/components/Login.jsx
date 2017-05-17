@@ -12,7 +12,7 @@ export var Login  = React.createClass({
 		this.refs.email='';
 		this.refs.password='';
 		
-		dispatch(actions.startLogin(email, password));
+		dispatch(actions.handleLogin(email, password));
 	},
 	render: function() {
 		return (

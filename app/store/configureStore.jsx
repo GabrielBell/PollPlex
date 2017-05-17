@@ -1,14 +1,15 @@
 import * as redux from 'redux';
 import thunk from 'redux-thunk';
 
-import {optionsReducer, pollsReducer, authReducer, profileReducer} from 'reducers';
+import {optionsReducer, pollsReducer, authReducer, completedReducer, votesReducer} from 'reducers';
 
 export var configure = (initialState = {}) => {
 	var reducer = redux.combineReducers({
 		options: optionsReducer,
 		polls: pollsReducer,
 		auth: authReducer,
-		profile: profileReducer
+		completed: completedReducer,
+		vote: votesReducer
 		
 	});
 

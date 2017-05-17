@@ -1,0 +1,27 @@
+.poll-list-container {
+	margin: auto;
+	width: 33.33%;
+	padding: 1rem 0;
+	
+
+	 .poll-container {
+	 	border: 1px solid $light-grey-border;
+	 	display: flex;
+	 	margin: 1rem;
+	 	padding-top: 1rem;
+	 	justify-content: center;
+	 	vertical-align: middle;
+
+	 	label {
+	 		padding-right: 1rem;
+	 		font-size: 1rem;
+	 	}
+
+	 	.delete-button {
+	 		margin: 0 0 0.5rem;
+	 		padding: 0.85em;
+	 		display: block;
+
+	 	}
+	 }
+}

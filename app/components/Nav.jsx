@@ -18,7 +18,7 @@ var Nav = React.createClass({
             <li>
               <Link to="#" onClick={(e) => {
                 e.preventDefault();
-                dispatch(actions.startLogout());
+                dispatch(actions.handleLogout());
                 
               }}>Logout</Link>
             </li>
@@ -65,7 +65,7 @@ var Nav = React.createClass({
 export default Redux.connect(
   (state) => {
     return {
-      firstName: state.profile.name,
+      firstName: state.auth.name,
       isLoggedIn: state.auth.uid
     };
   }
